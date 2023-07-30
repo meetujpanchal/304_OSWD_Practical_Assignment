@@ -30,4 +30,4 @@ app.get('/live-score', (req, res) => {
 
 app.listen(port, () => {
   console.log(`Live cricket score app is running on http://localhost:${port}`);
-});
+})
