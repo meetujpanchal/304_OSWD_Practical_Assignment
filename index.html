@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX call</title>
+</head>
+<body>
+    <h1>AJAX call from server</h1>
+
+    <button onclick="getHello()">Get Hello</button>
+
+    <div id="result"></div>
+
+    <script>
+        function getHello() {
+            fetch('/gethello')
+                .then(responce => responce.text())
+                .then(data => {
+                    document.getElementById('result').textContent = data;
+                })
+                .catch(error => {
+                    console.log("Error: " + error);
+                });
+        }
+    </script>
+</body>
+</html>
