@@ -3,4 +3,4 @@ git add .
 git branch -M (branch-name)
 git commit -m "message"
 git remote add origin (repo-url)
-git push -u origin (branch-name)
+git push -u origin (branch-name);
